@@ -87,8 +87,8 @@ if (message.content.startsWith(prefix + 'help')) {
     💠 -marry @user => لعبة الزواج
     💠 -speed => لعبة سرعة كتابة 
     💠 -لعبة فكك <= فكك
-    💠 -لعبة عواصم <= عواصم
-    💠 -البوت يعطيك نصائح <= هل تعلم
+   💠 -كت تويت => كت
+   💠-لعبة عواصم <= عواصم
       قريييب نضيف بعض الالعاب واذا تبون اي لعبة تعالو سيرفر المساعدة
     ===========================================================
       React With ▶ To See Music Commands`,
@@ -207,6 +207,52 @@ client.on('message' , message => {
   }
 }
  });
+
+
+client.on('message', message => {
+
+
+  if (!message.content.startsWith(prefix)) return;
+  var args = message.content.split(' ').slice(1);
+  var argresult = args.join(' ');
+  if (message.author.id == 406857707832737803) return;
+
+
+if (message.content.startsWith(prefix + 'playing')) {
+if (message.author.id !== '406857707832737803') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+client.user.setGame(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغيير الحالة`)
+} 
+
+ 
+if (message.content.startsWith(prefix + 'streem')) {
+if (message.author.id !== '406857707832737803') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+client.user.setGame(argresult, "http://twitch.tv/y04zgamer");
+    message.channel.sendMessage(`**${argresult}** :تم تغيير الحالة الى ستريمنج`)
+} else
+
+if (message.content.startsWith(prefix + 'name')) {
+if (message.author.id !== '406857707832737803') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+  client.user.setUsername(argresult).then
+      message.channel.sendMessage(`**${argresult}** : تم تغير الأسم`)
+  return message.reply("**لا تستطيع تغير الأسم الا بعد ساعتين**");
+} else
+    
+if (message.content.startsWith(prefix + 'image')) {
+if (message.author.id !== '406857707832737803') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+client.user.setAvatar(argresult);
+    message.channel.sendMessage(`**${argresult}** : تم تغير صورة البوت`);
+} else
+
+
+if (message.content.startsWith(prefix + 'watching')) {
+if (message.author.id !== '406857707832737803') return message.reply('** هذا الأمر فقط لصاحب البوت و شكراًً **')
+    client.user.setActivity(argresult, {type : 'watching'});
+ message.channel.sendMessage(`**${argresult}** : تم تغيير الووتشينق الى`)
+}
+
+ });
+
 
    client.on('message', message =>{
     let messageArray = message.content.split(" ");
@@ -393,8 +439,8 @@ client.on('message', msg => {
 });
 
 client.on('message', msg => {
-  if (msg.content.startsWith('-play')) {
-    msg.channel.send('Use >play');
+  if (msg.content.startsWith('play')) {
+    msg.channel.send('Use -play');
   }
 });
 
@@ -425,7 +471,68 @@ Server owner: __${guild.owner}__
 Server id: __${guild.id}__ 
 Server Count: __${guild.memberCount}__**`);
 client.channels.get("467833183254347797").sendEmbed(embed)
+
 });
+
+
+client.on('message', message => {
+    if(message.content == (prefix + "mb")) {
+    const embed = new Discord.RichEmbed()
+    .setDescription(`**Members info🔋
+:green_heart: online:   ${message.guild.members.filter(m=>m.presence.status == 'online').size}
+:heart:dnd:       ${message.guild.members.filter(m=>m.presence.status == 'dnd').size}
+:yellow_heart: idle:      ${message.guild.members.filter(m=>m.presence.status == 'idle').size}   
+:black_heart: offline:   ${message.guild.members.filter(m=>m.presence.status == 'offline').size} 
+:blue_heart:   all:  ${message.guild.memberCount}**`)         
+         message.channel.send({embed});
+
+    }
+  });
+
+const cuttweet = [
+     'كت تويت ‏| تخيّل لو أنك سترسم شيء وحيد فيصبح حقيقة، ماذا سترسم؟',
+     'كت تويت | أكثر شيء يُسكِت الطفل برأيك؟',
+     'كت تويت | الحرية لـ ... ؟',
+     'كت تويت | قناة الكرتون المفضلة في طفولتك؟',
+     'كت تويت ‏| كلمة للصُداع؟',
+     'كت تويت ‏| ما الشيء الذي يُفارقك؟',
+     'كت تويت | موقف مميز فعلته مع شخص ولا يزال يذكره لك؟',
+     'كت تويت ‏| أيهما ينتصر، الكبرياء أم الحب؟',
+     'كت تويت | بعد ١٠ سنين ايش بتكون ؟',
+     'كت تويت ‏| مِن أغرب وأجمل الأسماء التي مرت عليك؟',
+     '‏كت تويت | عمرك شلت مصيبة عن شخص برغبتك ؟',
+     'كت تويت | أكثر سؤال وجِّه إليك مؤخرًا؟',
+     '‏كت تويت | ما هو الشيء الذي يجعلك تشعر بالخوف؟',
+     '‏كت تويت | وش يفسد الصداقة؟',
+     '‏كت تويت | شخص لاترفض له طلبا ؟',
+     '‏كت تويت | كم مره خسرت شخص تحبه؟.',
+     '‏كت تويت | كيف تتعامل مع الاشخاص السلبيين ؟',
+     '‏كت تويت | كلمة تشعر بالخجل اذا قيلت لك؟',
+     '‏كت تويت | جسمك اكبر من عٌمرك او العكسّ ؟!',
+     '‏كت تويت |أقوى كذبة مشت عليك ؟',
+     '‏كت تويت | تتأثر بدموع شخص يبكي قدامك قبل تعرف السبب ؟',
+     'كت تويت | هل حدث وضحيت من أجل شخصٍ أحببت؟',
+     '‏كت تويت | أكثر تطبيق تستخدمه مؤخرًا؟',
+     '‏كت تويت | ‏اكثر شي يرضيك اذا زعلت بدون تفكير ؟',
+     '‏كت تويت | وش محتاج عشان تكون مبسوط ؟',
+     '‏كت تويت | مطلبك الوحيد الحين ؟',
+     '‏كت تويت | هل حدث وشعرت بأنك ارتكبت أحد الذنوب أثناء الصيام؟',
+]
+
+ client.on('message', message => {
+   if (message.content.startsWith(prefix + "كت")) {
+                if(!message.channel.guild) return message.reply('** This command only for servers**');
+  var embed = new Discord.RichEmbed()
+  .setColor('RANDOM')
+   .setThumbnail(message.author.avatarURL) 
+ .addField('لعبه كت تويت' ,
+  `${cuttweet[Math.floor(Math.random() * cuttweet.length)]}`)
+  message.channel.sendEmbed(embed);
+  console.log('[id] Send By: ' + message.author.username)
+    }
+});
+
+
  
 
 const prefix = "-"
