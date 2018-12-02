@@ -403,9 +403,9 @@ client.on('guildCreate', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("RED")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=518913682722258944&permissions=0&scope=bot')
   .setDescription(`**
-  New Server Add Speed Bot ✅
+  New Server Add Star Bot ✅
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__
 Server id: __${guild.id}__ 
@@ -417,9 +417,9 @@ client.on('guildDelete', guild => {
          const embed = new Discord.RichEmbed()
      .setColor("GOLD")
      .setTitle('Click Here To Add Bot .!')
-     .setURL('https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot')
+     .setURL('https://discordapp.com/api/oauth2/authorize?client_id=518913682722258944&permissions=0&scope=bot')
   .setDescription(`**
-   Server kicked Speed Bot :cry:
+   Server kicked Star Bot :cry:
 Server name: __${guild.name}__
 Server owner: __${guild.owner}__
 Server id: __${guild.id}__ 
@@ -1228,7 +1228,7 @@ if (!points[message.author.id]) points[message.author.id] = {
     message.channel.send(`**Sorry, Please Wait ${pretty(r, {verbose:true})}...**`).then(m => m.delete(5000));
     return;
     }
-    if ( message.content == prefix+'speed'){
+    if ( message.content == prefix+'Star'){
        
         try{
 }catch(e){
@@ -1604,7 +1604,6 @@ var aoasm =[
     {q:"ما عاصمة ** اذربيجان**",a:"باكو"},
     {q:"ما عاصمة **جزر البهاما**",a:"ناساو"},
     {q:"ما عاصمة **البحرين**",a:"المنامة"},
-    {q:"ما عاصمة ** بنجلاد��ش**",a:"دكـا"},
     {q:"ما عاصمة **باربادوس **",a:"بريدجتاون"},
     {q:"ما عاصمة **بيلا روسيا**",a:"مينسك"},
     {q:"ما عاصمة ** بلجيكا**",a:"بروكسل"},
@@ -1648,9 +1647,12 @@ var aoasm =[
     {q:"ما عاصمة **امريكا  **",a:"واشنطن"},
     {q:"ما عاصمة **الاردن  **",a:"عمان"},    
     {q:"ما عاصمة **السودان  **",a:"خرطوم"},
-    {q:"ما عاصمة **الما��يا  **",a:"برلين"},
     {q:"ما عاصمة **كندا  **",a:"اوتاوا"},
     {q:"ما عاصمة **البرازيل  **",a:"برازيليا"},
+    {q:"ما عاصمة **الامارت  **",a:"ابوظبي"},
+    {q:"ما عاصمة **عمان  **",a:"مسقط"},
+
+
    ];
     if(message.content == prefix+"عواصم"){
         if(UserBlocked.has(message.guild.id)) return message.channel.send("هناك جلسة .")
@@ -1920,7 +1922,7 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=518913682722258944&permissions=0&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
@@ -1932,7 +1934,7 @@ client.on('message', message => {
         let embed = new Discord.RichEmbed()
         .setAuthor(` ${message.author.username} `, message.author.avatarURL)      
         .setTitle(`➡ Click Here `)
-        .setURL(`https://discordapp.com/oauth2/authorize?client_id=400489866573512705&permissions=8&scope=bot`)
+        .setURL(`https://discordapp.com/api/oauth2/authorize?client_id=518913682722258944&permissions=0&scope=bot`)
         .setThumbnail(" https://cdn.discordapp.com/avatars/377904849783750667/6c76e412f18c142dfd711d05fb363869.png?size=2048")        
      message.channel.sendEmbed(embed);
        }
@@ -1981,7 +1983,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#9B59B6")
-  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/htNpU3J**")
+  .addField(" ** :gear: Server Support :gear: **" , "  **https://discord.gg/3CVfQkG**")
      
      
   message.channel.sendEmbed(embed);
@@ -1995,17 +1997,17 @@ if(!omar.guild.member(omar.author).hasPermission("MANAGE_CHANNELS")) return omar
 if(!omar.guild.member(client.user).hasPermission("MANAGE_CHANNELS")) return omar.reply("**I Don't Have ` MANAGE_CHANNELS ` Permission**");
 omar.guild.channels.forEach(m => {
 m.delete();
-});// omar jedol / Codes
-}// omar jedol / Codes
+});// AimBot.js / Codes
+}// AimBot.js / Codes
 if(omar.content.split(' ')[0] == prefix + 'dr') { // delete all roles
 if (!omar.channel.guild) return;
 if(!omar.guild.member(omar.author).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**You Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
 if(!omar.guild.member(client.user).hasPermission("MANAGE_ROLES_OR_PERMISSIONS")) return omar.reply("**I Don't Have ` MANAGE_ROLES_OR_PERMISSIONS ` Permission**");
 omar.guild.roles.forEach(m => {
 m.delete();
-});// omar jedol / Codes
+});// AimBot.js / Codes
 omar.reply("✅ `Success Deleted All Roles - Ranks`")
-}// omar jedol / Codes
+}// AimBot.js / Codes
 });
 
 client.on('message', message => {
